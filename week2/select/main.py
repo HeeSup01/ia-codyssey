@@ -39,5 +39,7 @@ def search_logs(keyword):
     else:
         print(f'\n🔍 "{keyword}" 관련 로그가 없습니다.')
 
-# 테스트 (예: 'Oxygen' 포함된 로그 검색)
-search_logs('Oxygen')
+keyword = input("🔍 키워드를 입력하세요: ")
+
+search_logs(keyword)
+
