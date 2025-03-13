@@ -6,7 +6,9 @@ error_file = "essential/critical_issues.log"
 logs1 = []
 logs2 = []
 
+print("===================")
 print("Hello Mars")
+print('\n')
 
 with open(log_file, "r", encoding="utf-8") as file:
     reader = csv.reader(file)
@@ -25,6 +27,7 @@ logs2.sort(reverse=True, key=lambda x: x[0])
 print("=== 로그 (시간 정순) ===")
 for log in logs1:
     print(",".join(log))
+print('\n')
 print("=== 로그 (시간 역순) ===")
 for log in logs2:
     print(",".join(log))
