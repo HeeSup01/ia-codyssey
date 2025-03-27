@@ -23,7 +23,7 @@ def process_inventory(data):
 
     # 인화성 기준으로 내림차순 정렬
     try:
-        inventory.sort(key=lambda x: float(x[4]), reverse=True)  # 인화성 지수 (5번째 열) 기준으로 정렬
+        inventory.sort(key=lambda x: float(x[4]), reverse=True)  
     except ValueError:
         print("Error: Flammability 값을 숫자로 변환할 수 없습니다.")
         return []
@@ -32,7 +32,7 @@ def process_inventory(data):
 
 # 인화성 지수가 0.7 이상인 항목을 필터링하는 함수
 def filter_dangerous_items(data, threshold=0.7):
-    return [row for row in data[1:] if float(row[4]) >= threshold]  # 데이터의 2번째 행부터 필터링
+    return [row for row in data[1:] if float(row[4]) >= threshold] 
 
 # CSV 파일로 저장하는 함수
 def save_to_csv(filename, data):
@@ -107,10 +107,12 @@ def read_from_binary(filename):
     except Exception as e:
         print(f"Error: {e}")
 
+
 # 실행 코드
 input_file = 'Mars_Base_Inventory_List.csv'
 danger_file = 'Mars_Base_Inventory_danger.csv'
 binary_file = 'Mars_Base_Inventory_List.bin'
+
 
 # CSV 파일 읽기
 csv_data = read_csv_file(input_file)
@@ -124,6 +126,12 @@ if processed_data:
         print("\n🔥 인화성 지수가 0.7 이상인 항목 🔥")
         for row in dangerous_items:
             print(f"물질: {row[0]}, 인화성 지수: {row[4]}")
+
+        print("\n🔥 csv 🔥")
+        for row in processed_data :
+            print(f"물질: {row[0]}, 인화성 지수: {row[4]}")           
+
+            
         
         # 인화성 지수가 0.7 이상인 항목을 CSV 파일로 저장
         save_to_csv(danger_file, [csv_data[0]] + dangerous_items)

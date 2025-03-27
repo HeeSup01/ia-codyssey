@@ -1,0 +1,16 @@
+2025-03-27 17:15:12
+mars_base_internal_temperature: 27
+mars_base_external_temperature: 13
+mars_base_internal_humidity: 52
+mars_base_external_illuminance: 568
+mars_base_internal_co2: 0.072
+mars_base_internal_oxygen: 6.8
+
+2025-03-27 17:15:18
+mars_base_internal_temperature: 23
+mars_base_external_temperature: 2
+mars_base_internal_humidity: 55
+mars_base_external_illuminance: 516
+mars_base_internal_co2: 0.094
+mars_base_internal_oxygen: 6.2
+
