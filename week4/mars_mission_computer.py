@@ -20,25 +20,24 @@ class DummySensor:
         self.env_values['mars_base_internal_oxygen'] = round(random.uniform(4.0, 7.0), 1)
     
     def get_env(self):
-        current_time = self.get_time()
+        current_time = self.get_time()  # 현재 시간을 가져옴
+        
+        # 센서 데이터를 문자열로 변환하여 로그 파일에 저장
         log_data = f"{current_time}\n" + "\n".join([f"{key}: {value}" for key, value in self.env_values.items()]) + "\n"
         
         with open('sensor_log.txt', 'a') as log_file:
             log_file.write(log_data + "\n")
         
-        return self.env_values
+        return self.env_values  # 현재 환경 값을 반환
     
-    def get_time(self):
-        t = __import__('time').localtime()
-        return f"{t.tm_year}-{t.tm_mon:02d}-{t.tm_mday:02d} {t.tm_hour:02d}:{t.tm_min:02d}:{t.tm_sec:02d}"
+    def get_time(self):  # 현재 시간을 반환하는 함수
+        t = __import__('time').localtime() 
+        return f"{t.tm_year}-{t.tm_mon:02d}-{t.tm_mday:02d} {t.tm_hour:02d}:{t.tm_min:02d}:{t.tm_sec:02d}" 
 
-# DummySensor 클래스 인스턴스 생성
 ds = DummySensor()
 
-# 환경 값 설정
 ds.set_env()
 
-# 환경 값 출력
 sensor_info = {
     'mars_base_internal_temperature': '화성 기지 내부 온도 (18~30도)',
     'mars_base_external_temperature': '화성 기지 외부 온도 (0~21도)',
@@ -49,5 +48,7 @@ sensor_info = {
 }
 
 print(ds.get_time())
+
+# 환경 값 출력
 for key, value in ds.get_env().items():
     print(f"{sensor_info.get(key, key)}: {value}")
