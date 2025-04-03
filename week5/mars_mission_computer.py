@@ -49,9 +49,13 @@ class MissionComputer:
 
         avg = {}
         keys = self.collected_data[0].keys()
+
         for key in keys:
-            values = [data[key] for data in self.collected_data]
-            avg[key] = round(sum(values) / len(values), 3)
+            # float으로 명시적 변환
+            values = [float(data.get(key, 0)) for data in self.collected_data]
+            total = sum(values)
+            average = total / len(values)
+            avg[key] = round(average, 3)
 
         print('\n[5분 평균 환경 데이터]')
         print('{')
@@ -68,13 +72,14 @@ class MissionComputer:
 
         self.collected_data.clear()
 
+
     def get_sensor_data(self):
         count = 0
         try:
             while True:
                 sensor_data = self.ds.get_env()
                 self.env_values = sensor_data
-                self.collected_data.append(sensor_data)
+                self.collected_data.append(sensor_data.copy())
 
                 count += 1
                 timestamp = self.get_time()
