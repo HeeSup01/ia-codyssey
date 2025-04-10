@@ -550,3 +550,51 @@ mars_base_external_illuminance: 618
 mars_base_internal_co2: 0.071
 mars_base_internal_oxygen: 5.3
 
+[Count 1] 2025-04-03 19:31:27
+mars_base_internal_temperature: 28
+mars_base_external_temperature: 4
+mars_base_internal_humidity: 55
+mars_base_external_illuminance: 511
+mars_base_internal_co2: 0.052
+mars_base_internal_oxygen: 6.6
+
+[Count 1] 2025-04-03 20:10:34
+mars_base_internal_temperature: 20
+mars_base_external_temperature: 7
+mars_base_internal_humidity: 57
+mars_base_external_illuminance: 572
+mars_base_internal_co2: 0.091
+mars_base_internal_oxygen: 5.8
+
+[Count 2] 2025-04-03 20:10:39
+mars_base_internal_temperature: 23
+mars_base_external_temperature: 11
+mars_base_internal_humidity: 54
+mars_base_external_illuminance: 583
+mars_base_internal_co2: 0.097
+mars_base_internal_oxygen: 4.1
+
+[Count 3] 2025-04-03 20:10:44
+mars_base_internal_temperature: 18
+mars_base_external_temperature: 21
+mars_base_internal_humidity: 58
+mars_base_external_illuminance: 566
+mars_base_internal_co2: 0.049
+mars_base_internal_oxygen: 4.3
+
+[Count 4] 2025-04-03 20:10:49
+mars_base_internal_temperature: 30
+mars_base_external_temperature: 0
+mars_base_internal_humidity: 59
+mars_base_external_illuminance: 595
+mars_base_internal_co2: 0.037
+mars_base_internal_oxygen: 4.3
+
+[Count 5] 2025-04-03 20:10:54
+mars_base_internal_temperature: 28
+mars_base_external_temperature: 6
+mars_base_internal_humidity: 50
+mars_base_external_illuminance: 697
+mars_base_internal_co2: 0.051
+mars_base_internal_oxygen: 5.6
+
