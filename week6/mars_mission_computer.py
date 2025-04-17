@@ -4,7 +4,6 @@ import time
 import platform
 import os
 
-
 class DummySensor:
     def __init__(self):
         self.env_values = {
