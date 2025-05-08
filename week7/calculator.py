@@ -7,7 +7,7 @@ from PyQt5.QtCore import Qt
 class Calculator(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('20253615/조희섭')
+        self.setWindowTitle('20253615조희섭')
         self.setFixedSize(360, 500)
         self.expression = ''
         self.init_ui()
@@ -86,7 +86,7 @@ class Calculator(QWidget):
             button.clicked.connect(lambda _, text=label: self.on_click(text))
             layout.addWidget(button, row, col, rowspan, colspan)
 
-    def format_result(self, result, digits=6, max_len=10):
+    def format_result(self, result, digits=6, max_len=14):
         try:
             float_result = round(float(result), digits)
             result = str(float_result)
